@@ -30,6 +30,7 @@ module.exports = {
     hoverPreview: true // If true, shows the content of an internal link in a tooltip when hovering over the link.
   },
   plugins: [
+    require.resolve("./plugins/gatsby-redefine-pages"),
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     `gatsby-plugin-dark-mode`,
@@ -96,18 +97,19 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
+          'gatsby-remark-line-breaks',
+          {
+            resolve: 'gatsby-remark-obsidian',
+            options: {
+              titleToURL: require(`${__dirname}/src/utils/make-slug.js`)
+            }
+          },
           'gatsby-remark-mermaid',
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
             },
-          },
-          {
-            resolve: 'gatsby-remark-obsidian',
-            options: {
-              titleToURL: require(`${__dirname}/src/utils/make-slug.js`)
-            }
           }
         ],
       },
