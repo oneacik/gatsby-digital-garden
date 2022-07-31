@@ -30,7 +30,6 @@ module.exports = {
     hoverPreview: true // If true, shows the content of an internal link in a tooltip when hovering over the link.
   },
   plugins: [
-    require.resolve("./plugins/gatsby-redefine-pages"),
     `gatsby-plugin-sharp`,
     `gatsby-remark-images`,
     `gatsby-plugin-dark-mode`,
