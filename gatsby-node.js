@@ -10,10 +10,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
 
     const fileName = createFilePath({ node, getNode, basePath: `_notes` }).replace(/^\/(.+)\/$/, '$1')
-    const title = node.frontmatter.title || fileName
-    const slug = node.frontmatter.slug
-      ? makeSlug(node.frontmatter.slug)
-      : makeSlug(fileName)
+    const title = fileName.replace(/.*\//, "")
+    const slug = makeSlug(title) 
     const fileNode = getNode(node.parent)
     const date = node.frontmatter.date || fileNode.mtime
     const visibility = node.frontmatter.visibility || 'public'
