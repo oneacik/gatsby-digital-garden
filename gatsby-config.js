@@ -5,7 +5,7 @@ module.exports = {
 
   siteMetadata: {
     title: `Ksidelta Garden`,
-    description: `My database of thoughts`,
+    description: `Piotr Suwała's digital garden`,
 
     // siteUrl: `https://yoursite.com/notes/`, // URL at which your site will be published. This should be present if you want RSS feed.
     // headerMenu: [ // Top Navbar items
