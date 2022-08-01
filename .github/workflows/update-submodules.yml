@@ -1,0 +1,19 @@
+name: Submodule Sync
+on:
+  repository_dispatch:
+    types:
+      - update-mindoo
+
+jobs:
+  submodule-sync:
+   runs-on: ubuntu-latest
+   steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+    - name: Checkout submodules
+      run: |
+        git config --global user.email "none@ksidelta.com"
+        git config --global user.name "Github BOT"
+        git submodule update --init --recursive --remote
+        git commit -a -m 'Updated Submodules'
+        git push origin master
