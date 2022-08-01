@@ -70,10 +70,6 @@ export default function Home() {
           <p className="lead">{siteConfig.siteMetadata.description}</p>
         </div>
 
-        <div className="block tag-list">
-          <MenuRoot menu={tagList} />
-        </div>
-
         <div className="block">
           <Search size="medium" showExcerpt={true} />
         </div>
