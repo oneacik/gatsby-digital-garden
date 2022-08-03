@@ -96,6 +96,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
+          'gatsby-remark-plantuml',
           'gatsby-remark-line-breaks',
           {
             resolve: 'gatsby-remark-obsidian',
