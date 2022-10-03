@@ -68,6 +68,8 @@ export default function Home() {
         <div className="block">
           <h1>{siteConfig.siteMetadata.title}</h1>
           <p className="lead">{siteConfig.siteMetadata.description}</p>
+          <p className="lead"><a href={siteConfig.siteMetadata.repository}>Repository</a></p>
+          <p className="lead"><a href={siteConfig.siteMetadata.startpoint}>Start Here</a></p>
         </div>
 
         <div className="block">

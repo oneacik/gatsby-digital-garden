@@ -6,6 +6,8 @@ module.exports = {
   siteMetadata: {
     title: `Ksidelta Garden`,
     description: `Piotr Suwała's digital garden`,
+    repository: `https://github.com/oneacik/gatsby-digital-garden`,
+    startpoint: `the-root`,
 
     // siteUrl: `https://yoursite.com/notes/`, // URL at which your site will be published. This should be present if you want RSS feed.
     // headerMenu: [ // Top Navbar items
