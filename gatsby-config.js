@@ -2,6 +2,7 @@ module.exports = {
   // Gatsby Config
   // pathPrefix: `/notes`, // If your Digital Garden is not published at the root of your website, use this.
   trailingSlash: 'never', // Remove all trailing slashes on each URL, e.g. /x/ to /x
+  assetPrefix: 'https://ksidelta.com',
 
   siteMetadata: {
     title: `Ksidelta Garden`,
