@@ -99,6 +99,7 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           'gatsby-remark-plantuml',
+          'gatsby-remark-copy-linked-files',  
           'gatsby-remark-line-breaks',
           {
             resolve: 'gatsby-remark-obsidian',
