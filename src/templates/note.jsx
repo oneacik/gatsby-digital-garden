@@ -99,7 +99,7 @@ export default function Note({ pageContext, data }) {
                   <Link { ...props } to={ `/${props.href}` } title="" />
                 </Tooltip>)
       } else {
-        return <Link { ...props } to={ `${props.href}` } />
+        return <a { ...props } href={ `${props.href}` } />
       }
     }
   }

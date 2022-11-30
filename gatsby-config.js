@@ -33,8 +33,8 @@ module.exports = {
     hoverPreview: true // If true, shows the content of an internal link in a tooltip when hovering over the link.
   },
   plugins: [
-    `gatsby-plugin-sharp`,
-    `gatsby-remark-images`,
+    //`gatsby-plugin-sharp`,
+    //`gatsby-remark-images`,
     `gatsby-plugin-dark-mode`,
     // { // Enable this if you want to have an RSS Feed. The `siteMetadata.siteUrl` property should be present for this to work
     //   // Also, you'll need to install this library. To do that, run the command `npm install gatsby-plugin-feed-mdx --save` in the same directory as this gatsby-config.js file.
@@ -100,7 +100,6 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           'gatsby-remark-plantuml',
-          'gatsby-remark-copy-linked-files',  
           'gatsby-remark-line-breaks',
           {
             resolve: 'gatsby-remark-obsidian',
@@ -114,7 +113,13 @@ module.exports = {
             options: {
               maxWidth: 1200,
             },
-          }
+          }, 
+          {
+            resolve: 'gatsby-remark-copy-linked-files',  
+            options: {
+              ignoreFileExtensions: [],
+            }
+          },
         ],
       },
     },
