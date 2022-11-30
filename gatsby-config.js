@@ -33,7 +33,7 @@ module.exports = {
     hoverPreview: true // If true, shows the content of an internal link in a tooltip when hovering over the link.
   },
   plugins: [
-    //`gatsby-plugin-sharp`,
+    `gatsby-plugin-sharp`,
     //`gatsby-remark-images`,
     `gatsby-plugin-dark-mode`,
     // { // Enable this if you want to have an RSS Feed. The `siteMetadata.siteUrl` property should be present for this to work
