@@ -104,6 +104,18 @@ export default function Note({ pageContext, data }) {
     }
   }
 
+  const H1 = (props) => (typeof props.children == "string") 
+                            ? <h1 id={props.children}>{props.children}</h1>
+                            : <h1>{props.children}</h1>
+
+  const H2 = (props) => (typeof props.children == "string") 
+                            ? <h2 id={props.children}>{props.children}</h2>
+                            : <h2>{props.children}</h2>
+
+  const H3 = (props) => (typeof props.children == "string") 
+                            ? <h3 id={props.children}>{props.children}</h3>
+                            : <h3>{props.children}</h3>
+
   return (
     <Layout title={post.fields.title} type="note">
       <div className="column is-three-fifths">
@@ -133,7 +145,7 @@ export default function Note({ pageContext, data }) {
             <h1 className="note-title">{post.fields.title}</h1>
             <div className="note-content">
               {/*<MDXRenderer>{post.body}</MDXRenderer>*/}
-              <MDXProvider components={{ a: TooltipLink }}>
+              <MDXProvider components={{ a: TooltipLink, h1: H1, h2: H2, h3: H3 }}>
                 <MDXRenderer>{post.body}</MDXRenderer>
               </MDXProvider>
             </div>
