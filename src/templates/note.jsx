@@ -78,6 +78,12 @@ export default function Note({ pageContext, data }) {
   }
 
   const TooltipLink = (props) => {
+    console.log(props)
+    
+    if(props.xLinkHref){
+      return <a href={props.xLinkHref} { ...props } />
+    }
+
     if(props.href.includes("http")) { // External link
       // eslint-disable-next-line
       return <a { ...props } />

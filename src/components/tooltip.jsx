@@ -22,6 +22,10 @@ export default function Tooltip({ children, content}) {
 
 // This is to disable the tooltips with the tooltip.
 const DefaultLink = (props) => {
+  if(props.xLinkHref){
+    return <a href={props.xLinkHref} { ...props } />
+  }
+
   if(props.href.includes("http")) { // External link
     // eslint-disable-next-line
     return <a { ...props } />
